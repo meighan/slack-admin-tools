@@ -1,0 +1,71 @@
+[
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Searching hotels in"
+      },
+      "accessory": {
+        "type": "external_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Enter location",
+          "emoji": true
+        },
+        "initial_option": {
+          "text": {
+            "type": "plain_text",
+            "text": "Los Angeles"
+          },
+          "value": "los-angeles"
+        }
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*From*"
+      },
+      "accessory": {
+        "type": "datepicker",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Select date"
+        },
+        "initial_date": "2019-04-14"
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*To*"
+      },
+      "accessory": {
+        "type": "datepicker",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Select date"
+        },
+        "initial_date": "2019-04-17"
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Update",
+            "emoji": true
+          },
+          "value": "udpate"
+        }
+      ]
+    }
+  ]

@@ -1,0 +1,70 @@
+[
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "Searching hotels in"
+      },
+      "accessory": {
+        "type": "external_select",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Enter location",
+          "emoji": true
+        },
+        "initial_option": {
+          "text": {
+            "type": "plain_text",
+            "text": "Los Angeles"
+          },
+          "value": "los-angeles"
+        }
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*From*"
+      },
+      "accessory": {
+        "type": "datepicker",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Select date"
+        }
+      }
+    },
+    {
+      "type": "section",
+      "text": {
+        "type": "mrkdwn",
+        "text": "*To*"
+      },
+      "accessory": {
+        "type": "datepicker",
+        "placeholder": {
+          "type": "plain_text",
+          "text": "Select date"
+        }
+      }
+    },
+    {
+      "type": "divider"
+    },
+    {
+      "type": "actions",
+      "elements": [
+        {
+          "type": "button",
+          "text": {
+            "type": "plain_text",
+            "text": "Search hotels",
+            "emoji": true
+          },
+          "style": "primary",
+          "value": "search"
+        }
+      ]
+    }
+  ]
