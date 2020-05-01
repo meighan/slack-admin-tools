@@ -1,0 +1,79 @@
+html
+	head
+		meta(charset="utf-8")
+		meta(http-equiv="X-UA-Compatible", content="IE=edge")
+		title #{title}
+		link(href="//fonts.googleapis.com/css?family=Lato:400,700,900", rel="stylesheet", type="text/css")
+		link(rel="stylesheet", type="text/css", href="public/main.css")
+	body
+
+		#layout.layout
+
+			a(href="#menu", id="menuLink", class="menu-link")
+				span
+			#menu.menu
+
+				if config.team_name
+					.team-menu #{config.team_name}
+				else
+					.team-menu Slack Archive
+				.listings
+					.listings_channels
+						h2.listings_header Public Channels
+						ul.channel_list
+							for channel in public_channels
+								li.channel(class=channel.name === title ? "active" : "")
+									a.channel_name(class=channel.name === title ? "active" : "", href="/"+channel.name)
+										span
+											span.channel_prefix #
+											| #{channel.name}
+					.listings_direct-messages
+						h2.listings_header Archived Channels
+						ul.channel_list
+							for channel in archived_channels
+								li.channel(class=channel.name === title ? "active" : "")
+									a.channel_name(class= channel.name === title ? "active" : "", href="/"+channel.name)
+										span
+											span.channel_prefix #
+											| #{channel.name}
+			#main.content
+				.channel-menu
+					span.channel-menu_name
+						span.channel-menu_prefix #
+						| #{title}
+				div#messages.message-history
+					div#vue-app
+						infinite-loading(@infinite="infiniteHandler", ref="infiniteLoading", spinner="spiral", direction="top", v-if="loadedFirstMessages===true")
+						div.message(v-bind:id="message.ts" v-for="message in messages")
+							//- span.message_profile-pic(style="background-image: url('"+message.user.profile.image_48+"');", href="")
+							span.message_username {{ message.user.name }}
+							a(href="/"+channel+"#"+message, style="text-decoration: none;")
+								span.message_timestamp  {{ message.ts_pretty }}
+							span.message_star
+							span.message_content(v-html="message.text")
+							.message_children(v-if="message.children")
+								div.message(v-bind:id="cmessage.ts" v-for="cmessage in message.children")
+									//- span.message_profile-pic(style="background-image: url('"+cmessage.user.profile.image_48+"');", href="")
+									span.message_username {{ cmessage.user.name }}
+									a(href="/"+channel+"#"+cmessage, style="text-decoration: none;")
+										span.message_timestamp {{ cmessage.ts_pretty }}
+									span.message_star
+									span.message_content(v-html="cmessage.text")
+				.footer
+					if config.slackin_url
+						.user-menu-container
+							.user-menu
+								span.user-menu_profile-pic(style="background-image:url('"+config.team_icon+"')")
+								span.user-menu_username Join the chat!
+								span#noOfUsers.connection_status
+									script(async="", defer="", src=config.slackin_url)
+					else
+						.user-menu-container
+							.user-menu
+								span(style="color:white;") This is a read-only Slack archive
+		script(type="text/javascript").
+			window.channelId = '!{title}'
+		script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/vue")
+		script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/vue-resource@1.3.5")
+		script(type="text/javascript", src="https://cdn.jsdelivr.net/npm/vue-infinite-loading@2.2.3/dist/vue-infinite-loading.min.js")
+		script(type="text/javascript", src="public/main.js")

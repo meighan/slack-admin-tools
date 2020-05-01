@@ -1,0 +1,94 @@
+{
+    "manifestVersion": 1,
+    "id": "slack-notification",
+    "name": "Slack Notification",
+    "publisher": "kasunkodagoda",
+    "version": "0.0.0",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Slack Notification task with advanced slack message customization for Azure DevOps. The task includes the ability to send optional attachments with the standard slack messages",
+    "categories": [
+        "Build and release"
+    ],
+    "screenshots": [
+        {
+            "path": "screenshots/screenshot-add-slack-notification-task.png"
+        },
+        {
+            "path": "screenshots/screenshot-required-options.png"
+        },
+        {
+            "path": "screenshots/screenshot-attachment-options.png"
+        },
+        {
+            "path": "screenshots/screenshot-slack-message.PNG"
+        }
+    ],
+    "galleryFlags": [
+        "Public"
+    ],
+    "tags": [ "build", "release", "notification", "slack", "chat", "messages" ],
+    "icons": {
+        "default": "marketplace-icon.png"        
+    },
+    "content": {
+        "details": {
+            "path": "overview.md"
+        },
+        "license": {
+            "path": "license.md"
+        },
+        "privacypolicy": {
+            "path": "privacy-policy.md"
+        }
+    },
+    "links": {
+        "getstarted": {
+            "uri": "https://github.com/kasunkv/slack-notification/wiki"
+        },
+        "support": {
+            "uri": "https://github.com/kasunkv/slack-notification/issues"
+        },
+        "repository": {
+            "uri": "https://github.com/kasunkv/slack-notification"
+        },
+        "issues": {
+            "uri": "https://github.com/kasunkv/slack-notification/issues"
+        }
+    },
+    "branding": {
+        "color": "rgb(28, 120, 25)",
+        "theme": "dark"
+    },
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/kasunkv/slack-notification"
+    },
+    "files": [
+        {
+            "path": "dist/buildtask"
+        },
+        {
+            "path": "screenshots",
+            "addressable": true
+        }
+    ],
+    "contributions": [
+        {
+            "id": "slack-notification-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "dist/buildtask/SlackNotification"
+            }
+        }
+    ],
+    "CustomerQnASupport": {
+        "enableqna":"true"
+    } 
+}

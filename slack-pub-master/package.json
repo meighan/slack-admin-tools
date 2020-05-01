@@ -1,0 +1,36 @@
+{
+  "name": "slack-pub",
+  "version": "0.0.1",
+  "description": "Publish your Slack archives on the internet!",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "fetch": "casperjs scripts/fetchArchive.js",
+    "test": "echo \"Error: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/karthikb351/slack-pub.git"
+  },
+  "author": "Karthik Balakrishnan (@karthikb351)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/karthikb351/slack-pub/issues"
+  },
+  "homepage": "https://github.com/karthikb351/slack-pub#readme",
+  "dependencies": {
+    "casperjs": "^1.1.4",
+    "express": "^4.15.3",
+    "glob": "^7.1.2",
+    "jsonfile": "^4.0.0",
+    "lokijs": "^1.5.1",
+    "lowdb": "^0.16.2",
+    "memory-cache": "^0.2.0",
+    "moment": "^2.19.2",
+    "moment-timezone": "^0.5.14",
+    "node-emoji": "^1.8.1",
+    "phantomjs": "^2.1.7",
+    "pug": "^2.0.0-rc.2",
+    "showdown": "^1.8.2"
+  }
+}

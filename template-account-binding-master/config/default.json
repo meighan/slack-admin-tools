@@ -1,0 +1,18 @@
+{
+  // "server" value  must adopt the interface of a URL Object
+  // (https://nodejs.org/dist/latest-v6.x/docs/api/url.html#url_url_strings_and_url_objects)
+  "server": {
+    "protocol": "http",
+    "hostname": "localhost",
+    "port": 3000
+  },
+  "session": {
+    // one day
+    "maxAge": 86400000,
+    // HTTPS-only cookies: set to `true` or the number of proxies to trust
+    "secure": false
+  },
+  "routes": {
+    "associationPath": "/link/slack"
+  }
+}
