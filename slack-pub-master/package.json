@@ -30,7 +30,7 @@
     "moment-timezone": "^0.5.14",
     "node-emoji": "^1.8.1",
     "phantomjs": "^2.1.7",
-    "pug": "^2.0.0-rc.2",
+    "pug": "^3.0.1",
     "showdown": "^1.8.2"
   }
 }
