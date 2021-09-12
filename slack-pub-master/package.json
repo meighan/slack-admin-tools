@@ -31,6 +31,6 @@
     "node-emoji": "^1.8.1",
     "phantomjs": "^2.1.7",
     "pug": "^2.0.0-rc.2",
-    "showdown": "^1.8.2"
+    "showdown": "^1.9.1"
   }
 }
