@@ -27,7 +27,7 @@
     "lowdb": "^0.16.2",
     "memory-cache": "^0.2.0",
     "moment": "^2.19.2",
-    "moment-timezone": "^0.5.14",
+    "moment-timezone": "^0.5.35",
     "node-emoji": "^1.8.1",
     "phantomjs": "^2.1.7",
     "pug": "^2.0.0-rc.2",
