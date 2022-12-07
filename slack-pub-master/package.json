@@ -20,7 +20,7 @@
   "homepage": "https://github.com/karthikb351/slack-pub#readme",
   "dependencies": {
     "casperjs": "^1.1.4",
-    "express": "^4.15.3",
+    "express": "^4.17.3",
     "glob": "^7.1.2",
     "jsonfile": "^4.0.0",
     "lokijs": "^1.5.1",
